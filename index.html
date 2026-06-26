@@ -163,6 +163,35 @@ footer{background:#0f1a2e;color:#9fb0c9;padding:50px 0 30px}
 /* reveal */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
+/* platform / brain section */
+.platform .plat-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:42px;align-items:center}
+.browser{background:#0e1830;border:1px solid rgba(255,255,255,.12);border-radius:14px;overflow:hidden;box-shadow:0 30px 70px -30px rgba(0,0,0,.8)}
+.bbar{display:flex;align-items:center;gap:8px;padding:11px 14px;background:rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.08)}
+.bbar .dot{width:11px;height:11px;border-radius:50%}
+.bbar .dot.r{background:#ff5f57}.bbar .dot.y{background:#febc2e}.bbar .dot.g{background:#28c840}
+.bbar .url{flex:1;margin:0 10px;background:rgba(255,255,255,.06);border-radius:7px;padding:5px 12px;font-size:12.5px;color:#9fb0c9;text-align:center}
+.livepill{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:600;color:#7ee0a0;background:rgba(126,224,160,.12);border:1px solid rgba(126,224,160,.25);border-radius:999px;padding:4px 10px;white-space:nowrap}
+.screen{padding:18px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}
+.kpi{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:13px}
+.kpi b{display:block;font-size:21px;color:#fff;letter-spacing:-.5px}
+.kpi span{font-size:11px;color:#9fb0c9;line-height:1.35;display:block;margin-top:4px}
+.score-h{font-size:12px;color:#9fb0c9;margin-bottom:10px;font-weight:500}
+.months{display:grid;grid-template-columns:repeat(6,1fr);gap:9px}
+.m{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:9px;padding:10px 8px;text-align:center}
+.m span{font-size:10.5px;color:#8493ad;display:block}
+.m b{font-size:16px;color:#fff;display:block;margin:3px 0}
+.m i{font-size:9.5px;font-weight:700;letter-spacing:.5px;font-style:normal;padding:2px 7px;border-radius:999px;display:inline-block}
+.m.bonus i{background:rgba(126,224,160,.18);color:#7ee0a0}
+.m.ok i{background:rgba(255,255,255,.1);color:#c4cee0}
+.m.penale i{background:rgba(255,90,90,.18);color:#ff8a8a}
+.m.penale b{color:#ff8a8a}
+.plat-cap{display:flex;flex-direction:column;gap:20px}
+.plat-cap .row{display:flex;gap:16px;align-items:flex-start}
+.plat-cap .n{flex:0 0 auto;width:40px;height:40px;border-radius:11px;background:rgba(242,165,44,.14);border:1px solid rgba(242,165,44,.3);display:flex;align-items:center;justify-content:center;color:var(--amber);font-weight:700;font-size:18px}
+.plat-cap h3{color:#fff;font-size:16.5px;margin-bottom:2px}
+.plat-cap p{color:#b9c4d8;font-size:14px}
+@media(max-width:880px){.platform .plat-grid{grid-template-columns:1fr;gap:28px}.kpis{grid-template-columns:repeat(2,1fr)}.months{grid-template-columns:repeat(3,1fr)}}
 /* responsive */
 @media(max-width:880px){
   section{padding:64px 0}
@@ -314,6 +343,51 @@ footer{background:#0f1a2e;color:#9fb0c9;padding:50px 0 30px}
         <div class="row reveal"><div class="n">02</div><div><h3>Ordina</h3><p>Triage per euro persi: cosa pulire, cosa riparare, in che ordine.</p></div></div>
         <div class="row reveal"><div class="n">03</div><div><h3>Misura</h3><p>Baseline controfattuale: quantifica il valore creato — è ciò che rende la garanzia firmabile.</p></div></div>
         <p class="insight-foot reveal">Dati certificati, per-modulo: bancabilità più solida e prove per le autorizzazioni.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PIATTAFORMA / IL CERVELLO -->
+<section id="piattaforma" class="dark platform">
+  <div class="wrap">
+    <div class="center reveal" style="margin-bottom:46px">
+      <div class="eyebrow">La piattaforma</div>
+      <h2 style="margin-top:12px">Il cervello: la piattaforma che decide — e tiene il punteggio.</h2>
+      <p class="lead">Ingestione del dato, decisione, misura — ogni notte. L'AI decide quando e dove conviene pulire, e quantifica in euro il valore creato. Non a parole: sul cruscotto, aggiornato dal dato reale dell'impianto.</p>
+    </div>
+    <div class="plat-grid">
+      <div class="browser reveal">
+        <div class="bbar">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <div class="url">insight.solaroak.it</div>
+          <div class="livepill"><span class="live-dot"></span> LIVE · aggiornato ogni notte</div>
+        </div>
+        <div class="screen">
+          <div class="kpis">
+            <div class="kpi"><b style="color:#7ee0a0">0,98%</b><span>Soiling-loss · mese in corso<br>garanzia ≤ 1%</span></div>
+            <div class="kpi"><b>99,02%</b><span>PR al netto dello sporco</span></div>
+            <div class="kpi"><b style="color:var(--amber)">256.914 €</b><span>Valore restituito · sito intero</span></div>
+            <div class="kpi"><b>−90%</b><span>Acqua vs pulizia manuale</span></div>
+          </div>
+          <div class="score">
+            <div class="score-h">Garanzia, mese per mese — soiling vs soglia 1%</div>
+            <div class="months">
+              <div class="m bonus"><span>2026-01</span><b>0,69%</b><i>BONUS</i></div>
+              <div class="m penale"><span>2026-02</span><b>1,02%</b><i>PENALE</i></div>
+              <div class="m ok"><span>2026-03</span><b>0,81%</b><i>OK</i></div>
+              <div class="m ok"><span>2026-04</span><b>0,77%</b><i>OK</i></div>
+              <div class="m ok"><span>2026-05</span><b>0,83%</b><i>OK</i></div>
+              <div class="m ok"><span>2026-06</span><b>0,98%</b><i>OK</i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="plat-cap">
+        <div class="row reveal"><div class="n">✓</div><div><h3>Tiene il punteggio della garanzia</h3><p>Soglia soiling ≤ 1%: ogni mese è OK, BONUS o PENALE. Il rischio è misurato, pubblico, verificabile — non una promessa a voce.</p></div></div>
+        <div class="row reveal"><div class="n">€</div><div><h3>Valore restituito in euro</h3><p>Baseline controfattuale: quantifica il valore creato impianto per impianto. Misurato, non promesso.</p></div></div>
+        <div class="row reveal"><div class="n">↻</div><div><h3>Aggiornata ogni notte</h3><p>È il dato reale dell'impianto a scrivere il cruscotto. Vedi cosa succede stanotte, non un report a fine anno.</p></div></div>
+        <a href="https://ilepetrov.github.io/optima-insight-demo/" target="_blank" rel="noopener" class="btn btn-ghost reveal" style="margin-top:8px">Provala dal vivo →</a>
       </div>
     </div>
   </div>

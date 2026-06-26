@@ -196,9 +196,12 @@ footer{background:#0f1a2e;color:#9fb0c9;padding:50px 0 30px}
 @media(max-width:880px){
   section{padding:64px 0}
   .hero .grid,.insight-grid,.contact-grid{grid-template-columns:1fr;gap:34px}
-  .c3,.c2,.steps,.compare{grid-template-columns:1fr}
+  .c3,.c2,.steps,.compare,.frow{grid-template-columns:1fr}
   .nav-links{display:none}
   .menu-btn{display:block}
+  .nav-cta .btn-primary{display:none}
+  h1,h2,h3{letter-spacing:-.3px}
+  .wrap{padding:0 18px}
   .nav-links.open{display:flex;position:absolute;top:74px;left:0;right:0;flex-direction:column;background:var(--cloud);border-bottom:1px solid var(--line);padding:18px 24px;gap:16px}
   .hero{padding-top:48px}
   .live-card{left:10px}
@@ -554,8 +557,4 @@ document.getElementById('leadForm').addEventListener('submit',function(ev){
   ev.preventDefault();const f=ev.target;
   const g=n=>encodeURIComponent((f[n]&&f[n].value||'').trim());
   const body=`Nome: ${decodeURIComponent(g('nome'))}%0D%0AAzienda: ${decodeURIComponent(g('azienda'))}%0D%0AEmail: ${decodeURIComponent(g('email'))}%0D%0AImpianti/MWp: ${decodeURIComponent(g('mwp'))}%0D%0ATelefono: ${decodeURIComponent(g('telefono'))}%0D%0A%0D%0AMessaggio:%0D%0A${decodeURIComponent(g('messaggio'))}`;
-  window.location.href=`mailto:ilepetrov.ip@gmail.com?subject=${encodeURIComponent('Richiesta valutazione Solar Oak — '+(f.azienda.value||''))}&body=${body}`;
-});
-</script>
-</body>
-</html>
+  window.location.href=`mailto:ilepetrov.ip@gmail.com?subject=${encodeURIComponent('Richie

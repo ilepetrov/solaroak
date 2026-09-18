@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ilepetrov.github.io/solaroak/sitemap.xml

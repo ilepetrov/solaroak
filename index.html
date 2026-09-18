@@ -107,10 +107,12 @@
 
     <section class="contact section" id="contatti" aria-labelledby="contact-title"><div class="wrap contact-grid">
       <div><p class="section-label">Il primo passo è parlarne</p><h2 id="contact-title">Conosciamoci.<br>Mettiamo a fuoco<br><span>il prossimo passo.</span></h2><p>Gestisci un impianto o sviluppi tecnologie per il settore? Raccontaci di cosa ti occupi e dove vedi un’opportunità di collaborazione.</p></div>
-      <form class="contact-form" name="approfondimento" method="POST" action="/grazie.html" data-netlify="true" netlify-honeypot="website" aria-labelledby="form-title" aria-describedby="form-help">
+      <form class="contact-form" name="approfondimento" method="POST" action="#contatti" aria-labelledby="form-title" aria-describedby="form-help form-status">
         <input type="hidden" name="form-name" value="approfondimento">
         <p hidden><label>Non compilare questo campo <input name="website" tabindex="-1" autocomplete="off"></label></p>
         <h3 id="form-title">Approfondiamo il tuo interesse.</h3><p id="form-help">Bastano poche informazioni per iniziare il confronto. I campi con * sono obbligatori.</p>
+        <p class="form-status" id="form-status">Il modulo è in attivazione. Nel frattempo puoi <a href="mailto:ilepetrov.ip@gmail.com?subject=Solar%20Oak%20-%20Richiesta%20di%20approfondimento">scriverci direttamente</a>.</p>
+        <fieldset disabled>
         <div class="form-row"><label for="nome">Nome e cognome *<input id="nome" name="name" autocomplete="name" required maxlength="120"></label><label for="azienda">Azienda / organizzazione<input id="azienda" name="company" autocomplete="organization" maxlength="160"></label></div>
         <label for="email">Email professionale *<input id="email" name="email" type="email" autocomplete="email" required maxlength="254" placeholder="nome@azienda.it"></label>
         <label for="interesse">Di cosa vorresti parlare? *<select id="interesse" name="interest" required><option value="">Seleziona un argomento</option value="impianto">Gestione di un impianto</option><option value="collaborazione">Collaborazione industriale o tecnologica</option><option value="progetto">Conoscere il progetto</option><option value="altro">Altro</option></select></label>
@@ -118,7 +120,7 @@
         <p class="field-help" id="message-help">Per questo primo contatto non servono documenti o informazioni riservate.</p>
         <label class="privacy-check" for="privacy"><input id="privacy" name="privacy" type="checkbox" value="letta" required><span>Ho letto l’<a href="privacy.html" target="_blank" rel="noopener">informativa privacy</a>. I dati saranno utilizzati per rispondere alla mia richiesta. *</span></label>
         <button class="button" type="submit" disabled aria-describedby="form-status">Richiedi un approfondimento <span aria-hidden="true">↗</span></button>
-        <p class="form-status" id="form-status">Anteprima del modulo: l’invio sarà disponibile dopo l’attivazione del servizio di ricezione.</p>
+        </fieldset>
       </form>
     </div></section>
   </main>
